@@ -1,0 +1,28 @@
+[
+  {
+    "type": "database",
+    "name": "postgres",
+    "version": "17",
+    "description": "PostgreSQL is a powerful, open source object-relational database system.",
+    "url": "https://www.postgresql.org/",
+    "logo": "https://raw.githubusercontent.com/sgraaf/Unraid-Docker-Templates/main/postgresql17/icon.png",
+    "documentation": "https://www.postgresql.org/docs/",
+    "languages": ["SQL", "PL/pgSQL", "PL/Python", "PL/Perl", "PL/Ruby"],
+    "license": "PostgreSQL License",
+    "repository": "https://github.com/postgres/postgres",
+    "link": ""
+  },
+  {
+    "type": "database",
+    "name": "mariadb",
+    "version": "latest",
+    "description": "MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL.",
+    "url": "https://mariadb.org/",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mariadb-logo.png",
+    "documentation": "https://mariadb.com/kb/en/documentation/",
+    "languages": ["SQL", "PL/SQL"],
+    "license": "GPLv2",
+    "repository": "https://github.com/mariadb/mariadb-server",
+    "link": ""
+  }
+]
