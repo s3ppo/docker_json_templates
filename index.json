@@ -37,5 +37,18 @@
     "license": "MIT",
     "repository": "https://github.com/imagegenius/immich",
     "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/media/immich.json"
+  },
+  {
+    "type": "media",
+    "name": "jellyfin",
+    "version": "latest",
+    "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+    "url": "https://jellyfin.org/",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jellyfin-logo.png",
+    "documentation": "https://jellyfin.org/docs/",
+    "languages": [".NET", "C#"],
+    "license": "GPLv2",
+    "repository": "https://github.com/jellyfin/jellyfin",
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/media/jellyfin.json"
   }
 ]
