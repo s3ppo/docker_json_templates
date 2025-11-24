@@ -10,7 +10,7 @@
     "languages": ["SQL", "PL/pgSQL", "PL/Python", "PL/Perl", "PL/Ruby"],
     "license": "PostgreSQL License",
     "repository": "https://github.com/postgres/postgres",
-    "link": ""
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/database/postgresql17.json"
   },
   {
     "type": "database",
@@ -23,6 +23,6 @@
     "languages": ["SQL", "PL/SQL"],
     "license": "GPLv2",
     "repository": "https://github.com/mariadb/mariadb-server",
-    "link": ""
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/database/mariadb.json"
   }
 ]
