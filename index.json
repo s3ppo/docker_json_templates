@@ -24,5 +24,18 @@
     "license": "GPLv2",
     "repository": "https://github.com/mariadb/mariadb-server",
     "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/database/mariadb.json"
+  },
+  {
+    "type": "media",
+    "name": "immich",
+    "version": "latest",
+    "description": "Immich is a high performance self-hosted photo and video backup solution.",
+    "url": "https://immich.app/",
+    "logo": "https://raw.githubusercontent.com/imagegenius/templates/main/unraid/img/immich.png",
+    "documentation": "https://immich.app/docs",
+    "languages": ["TypeScript", "Node.js"],
+    "license": "MIT",
+    "repository": "https://github.com/imagegenius/immich",
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/media/immich.json"
   }
 ]
