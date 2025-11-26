@@ -50,5 +50,44 @@
     "license": "GPLv2",
     "repository": "https://github.com/jellyfin/jellyfin",
     "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/media/jellyfin.json"
+  },
+  {
+    "type": "media",
+    "name": "plex",
+    "version": "latest",
+    "description": "Plex(https://plex.tv) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. Straightforward design and bulk actions mean getting things done faster.",
+    "url": "https://plex.tv",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png",
+    "documentation": "https://docs.plex.tv/",
+    "languages": ["C++", "Python", "JavaScript"],
+    "license": "Proprietary",
+    "repository": "https://github.com/linuxserver/docker-plex",
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/media/plex.json"
+  },
+  {
+    "type": "network",
+    "name": "pi-hole",
+    "version": "latest",
+    "description": "Pi-hole is a Linux network-level advertisement and internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server.",
+    "url": "https://pi-hole.net/",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/pihole-logo.png",
+    "documentation": "https://docs.pi-hole.net/",
+    "languages": ["C", "PHP", "JavaScript"],
+    "license": "GPLv2",
+    "repository": "https://github.com/pi-hole/pi-hole",
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/network/pihole.json"
+  },
+  {
+    "type": "network",
+    "name": "adguardhome",
+    "version": "latest",
+    "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.",
+    "url": "https://adguard.com/en/adguard-home/overview.html",
+    "logo": "https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/adguard.png",
+    "documentation": "https://adguard.com/en/adguard-home/overview.html",
+    "languages": ["Go"],
+    "license": "GPLv3",
+    "repository": "https://github.com/AdguardTeam/AdGuardHome",
+    "link": "https://raw.githubusercontent.com/s3ppo/docker_json_templates/refs/heads/main/network/adguard.json"
   }
 ]
