@@ -70,7 +70,7 @@
     "version": "latest",
     "description": "Pi-hole is a Linux network-level advertisement and internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server.",
     "url": "https://pi-hole.net/",
-    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/pihole-logo.png",
+    "logo": "https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/Vortex-R.png",
     "documentation": "https://docs.pi-hole.net/",
     "languages": ["C", "PHP", "JavaScript"],
     "license": "GPLv2",
