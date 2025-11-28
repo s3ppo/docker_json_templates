@@ -18,7 +18,7 @@
   "paths": [
     {
       "name": "Working Directory",
-      "host": "/mnt/cache/appdata/opt/adguardhome/work",
+      "host": "/mnt/cache/appdata/adguardhome/opt/work",
       "container": "/opt/adguardhome/work",
       "mode": "rw",
       "description": "/opt/adguardhome/work",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Working Directory",
-      "host": "/mnt/cache/appdata/opt/adguardhome/conf",
+      "host": "/mnt/cache/appdata/adguardhome/opt/conf",
       "container": "/opt/adguardhome/conf",
       "mode": "rw",
       "description": "Configuration Directory",

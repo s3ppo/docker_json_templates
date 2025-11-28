@@ -18,7 +18,7 @@
   "paths": [
     {
       "name": "Appdata",
-      "host": "/mnt/cache/appdata/config",
+      "host": "/mnt/cache/appdata/immich/config",
       "container": "/config",
       "mode": "rw",
       "description": "Contains machine learning models (~1.5GB with default models)",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Path: /photos",
-      "host": "/mnt/cache/appdata/photos",
+      "host": "/mnt/cache/appdata/immich/photos",
       "container": "/photos",
       "mode": "rw",
       "description": "Contains all the photos uploaded to Immich",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Path: /libraries",
-      "host": "/mnt/cache/appdata/libraries",
+      "host": "/mnt/cache/appdata/immich/libraries",
       "container": "/libraries",
       "mode": "rw",
       "description": "External libraries to track assets stored outside of Immich",

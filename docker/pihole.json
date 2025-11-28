@@ -18,7 +18,7 @@
   "paths": [
     {
       "name": "Path: /etc/pihole",
-      "host": "/mnt/cache/appdata/etc/pihole",
+      "host": "/mnt/cache/appdata/pihole/etc",
       "container": "/etc/pihole",
       "mode": "rw",
       "description": "This is the container path to store pihole configuration files",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Path: /etc/dnsmasq.d",
-      "host": "/mnt/cache/appdata/etc/dnsmasq.d",
+      "host": "/mnt/cache/appdata/pihole/etc/dnsmasq.d",
       "container": "/etc/dnsmasq.d",
       "mode": "rw",
       "description": "This is the container path to store dnsmaqs configuration files",

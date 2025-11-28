@@ -1,8 +1,0 @@
-{
-  "name": "flask2",
-  "category": "internet",
-  "description": "Something something2.",
-  "website": "https://flask.palletsprojects.com/en/stable/",
-  "icon": "https://raw.githubusercontent.com/pallets/flask/refs/heads/main/docs/tutorial/flaskr_login.png",
-  "support": "https://github.com/pallets/flask/issues"
-}

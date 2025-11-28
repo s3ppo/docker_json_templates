@@ -18,7 +18,7 @@
   "paths": [
     {
       "name": "Path: /data/tvshows",
-      "host": "/mnt/cache/appdata/data/tvshows",
+      "host": "/mnt/cache/appdata/jellyfin/data/tvshows",
       "container": "/data/tvshows",
       "mode": "rw",
       "description": "Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc.",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Path: /data/movies",
-      "host": "/mnt/cache/appdata/data/movies",
+      "host": "/mnt/cache/appdata/jellyfin/data/movies",
       "container": "/data/movies",
       "mode": "rw",
       "description": "Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc.",
@@ -34,7 +34,7 @@
     },
     {
       "name": "xmltv",
-      "host": "/mnt/cache/appdata/xmltv",
+      "host": "/mnt/cache/appdata/jellyfin/xmltv",
       "container": "/xmltv",
       "mode": "rw",
       "description": null,
@@ -42,7 +42,7 @@
     },
     {
       "name": "Appdata",
-      "host": "/mnt/cache/appdata/config",
+      "host": "/mnt/cache/appdata/jellyfin/config",
       "container": "/config",
       "mode": "rw",
       "description": "Jellyfin data storage location. *This can grow very large, 50gb+ is likely for a large collection.*",
