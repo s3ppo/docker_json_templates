@@ -1,5 +1,5 @@
 {
-  "name": "bbergle-jellyfin",
+  "name": "Jellyfin",
   "repo": "jellyfin/jellyfin:latest",
   "category": [ "media" ],
   "registry": null,
@@ -18,7 +18,7 @@
   "paths": [
     {
       "name": "Path: /data/tvshows",
-      "host": "/mnt/cache/appdata/jellyfin/data/tvshows",
+      "host": "/mnt/main/serien",
       "container": "/data/tvshows",
       "mode": "rw",
       "description": "Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc.",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Path: /data/movies",
-      "host": "/mnt/cache/appdata/jellyfin/data/movies",
+      "host": "/mnt/main/filme",
       "container": "/data/movies",
       "mode": "rw",
       "description": "Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc.",
