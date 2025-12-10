@@ -1,5 +1,5 @@
 {
-  "name": "binhex-official-pihole",
+  "name": "pihole",
   "repo": "pihole/pihole",
   "category": [ "network" ],
   "registry": "https://hub.docker.com/r/pihole/pihole",
@@ -11,7 +11,7 @@
   "post_parameters": null,
   "cpu_set": null,
   "web_ui_url": "http://[IP]:[PORT:8155]/admin",
-  "icon": "https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/official-pihole-icon.png",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png",
   "project": "https://pi-hole.net/",
   "support": "https://github.com/pi-hole/pi-hole/issues",
   "description": "Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine. Pi-hole has the ability to block traditional website advertisements as well as advertisements in unconventional places, such as smart TVs and mobile operating system advertisements.",

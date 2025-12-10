@@ -11,7 +11,7 @@
   "post_parameters": null,
   "cpu_set": null,
   "web_ui_url": "http://[IP]:[PORT:32400]/web/index.html",
-  "icon": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-logo.png",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/plex.png",
   "project": "https://plex.tv",
   "support": "https://github.com/linuxserver/docker-plex/issues/new/choose",
   "description": "Plex(https://plex.tv) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. Straightforward design and bulk actions mean getting things done faster.",

@@ -9,9 +9,9 @@
   "extra_parameters": null,
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:8080]",
-  "icon": "https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/adminer.png",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/adminer.png",
   "project": "https://github.com/vrana/adminer",
-  "support": "https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/",
+  "support": "",
   "description": "Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.\r\n    [br]\r\n    [br]\r\n    Go to  [b][u][span style='color: #E80000;']https://github.com/vrana/adminer/tree/master/designs[/span][/u][/b] for themes\r\n[br] [br]\r\nPlugins: https://github.com/vrana/adminer/tree/master/plugins",
   "paths": [],
   "ports": [

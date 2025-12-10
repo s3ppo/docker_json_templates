@@ -11,9 +11,9 @@
   "post_parameters": null,
   "cpu_set": null,
   "web_ui_url": "http://[IP]:[PORT:3000]/",
-  "icon": "https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/adguard.png",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/adguard-home.png",
   "project": null,
-  "support": "https://forums.unraid.net/topic/75588-support-siwats-docker-repository/",
+  "support": "",
   "description": "AdGuard Home is a network-wide software for blocking ads &amp; tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.\r",
   "paths": [
     {
