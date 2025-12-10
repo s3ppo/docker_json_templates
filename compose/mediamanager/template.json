@@ -1,0 +1,8 @@
+{
+  "name": "mediamanager-compose",
+  "category": "media",
+  "description": "MediaManager is modern software to manage your TV and movie library. It is designed to be a replacement for Sonarr, Radarr, Overseer, Unpackerr and Jellyseer. It supports TVDB and TMDB for metadata, supports OIDC and OAuth 2.0 for authentication and supports Prowlarr and Jackett.",
+  "website": "https://mediamanager.maxdorninger.com/",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/media-manager.png",
+  "support": "https://github.com/maxdorninger/mediamanager/issues"
+}
