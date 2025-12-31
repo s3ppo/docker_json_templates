@@ -7,6 +7,7 @@
   "privileged": false,
   "extra_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:8001]",
+  "description": "Kimai is a free open-source time-tracking software that can be used for various purposes, including project management, invoicing, and productivity tracking. It offers a user-friendly interface and a range of features to help individuals and teams manage their time effectively.\n\nKey Features:\n- Multi-user support with role-based access control\n- Project and task management\n- Time tracking with start/stop functionality\n- Invoicing and billing capabilities\n- Reporting and analytics\n- Integration with third-party tools via API\n\nSetup Instructions:\n1. Ensure you have a compatible database (MySQL, MariaDB, or PostgreSQL) set up and accessible.\n2. Configure the necessary environment variables, including database connection details.\n3. Map the required volumes for configuration and data storage.\n4. Expose the web UI port (default: 8001) to access Kimai through your web browser.\n5. Follow the on-screen instructions to complete the initial setup and create an admin account.\n\nFor more detailed information and documentation, visit the official Kimai website or GitHub repository.\n",
   "icon": "https://raw.githubusercontent.com/kimai/kimai/refs/heads/main/public/touch-icon-180x180.png",
   "paths": [
     {
