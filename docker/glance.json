@@ -12,7 +12,7 @@
   "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/glance.png",
   "project": "https://github.com/glanceapp/glance",
   "support": "https://forums.unraid.net/topic/167893-support-devzwf-glance/",
-  "description": "What if you could see everything at a...\r\n\r\nGlance\r\n\r\nContainer expect a &quot;glance.yml&quot; file to be mounted at /app/glance.yml before running. See https://github.com/glanceapp/glance/blob/main/docs/configuration.md for more information.",
+  "description": "What if you could see everything at a...\r\n\r\nGlance\r\n\r\nContainer expect a \"glance.yml\" file to be mounted at /app/glance.yml before running. See https://github.com/glanceapp/glance/blob/main/docs/configuration.md for more information.",
   "paths": [
     {
       "name": "Localtime",
