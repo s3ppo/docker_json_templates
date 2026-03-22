@@ -2,6 +2,7 @@
   "name": "iGotify",
   "repo": "ghcr.io/androidseb25/igotify-notification-assist:latest",
   "registry": "https://ghcr.io/",
+  "category": [ "misc" ],  
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",

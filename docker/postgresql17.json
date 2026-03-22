@@ -1,7 +1,7 @@
 {
   "name": "postgresql17",
   "repo": "postgres:17",
-  "category": [ "database" ],
+  "category": [ "system" ],
   "network": "bridge",
   "custom_ip": "",
   "default_shell": "",

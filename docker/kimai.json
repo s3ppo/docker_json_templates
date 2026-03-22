@@ -2,6 +2,7 @@
   "name": "kimai",
   "repo": "kimai/kimai2:apache",
   "network": "bridge",
+  "category": [ "productivity" ],  
   "custom_ip": null,
   "default_shell": "sh",
   "privileged": false,

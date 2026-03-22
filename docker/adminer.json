@@ -2,6 +2,7 @@
   "name": "adminer",
   "repo": "adminer",
   "registry": "http://hub.docker.com/_/adminer/",
+  "category": [ "utilities" ],  
   "network": "bridge",
   "custom_ip": null,
   "default_shell": null,

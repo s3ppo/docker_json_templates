@@ -3,6 +3,7 @@
   "repo": "lscr.io/linuxserver/duplicati",
   "registry": "https://github.com/orgs/linuxserver/packages/container/package/duplicati",
   "network": "bridge",
+  "category": [ "backup" ],  
   "custom_ip": null,
   "default_shell": "bash",
   "privileged": false,

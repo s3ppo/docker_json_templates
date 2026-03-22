@@ -1,7 +1,7 @@
 {
   "name": "mariadb",
   "repo": "lscr.io/linuxserver/mariadb",
-  "category": [ "database" ],
+  "category": [ "system" ],
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "bash",

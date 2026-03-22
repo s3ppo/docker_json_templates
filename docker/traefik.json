@@ -3,6 +3,7 @@
   "repo": "traefik:latest",
   "registry": "https://hub.docker.com/_/traefik",
   "network": "bridge",
+  "category": [ "network" ],  
   "custom_ip": null,
   "default_shell": "sh",
   "privileged": false,

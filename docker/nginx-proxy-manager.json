@@ -2,6 +2,7 @@
   "name": "Nginx-Proxy-Manager-Official_new",
   "repo": "jc21/nginx-proxy-manager",
   "registry": "https://hub.docker.com/r/jc21/nginx-proxy-manager",
+  "category": [ "network" ],  
   "network": "br0",
   "custom_ip": null,
   "default_shell": "sh",

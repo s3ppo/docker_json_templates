@@ -2,6 +2,7 @@
   "name": "Glance",
   "repo": "glanceapp/glance",
   "registry": "https://hub.docker.com/r/glanceapp/glance",
+  "category": [ "monitoring" ],  
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",

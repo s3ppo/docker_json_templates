@@ -3,6 +3,7 @@
   "repo": "luigi311/jellyplex-watched:latest",
   "registry": "https://hub.docker.com/r/luigi311/jellyplex-watched/",
   "network": "bridge",
+  "category": [ "media" ],  
   "custom_ip": null,
   "default_shell": "sh",
   "privileged": false,
