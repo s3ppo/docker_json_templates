@@ -1,0 +1,13 @@
+{
+  "name": "MOS htop",
+  "description": "Htop for MOS",
+  "category": [ "System" ],
+  "repository": "https://github.com/s3ppo/mos-htop",
+  "architecture": [ "amd64" ],
+  "driver": false,
+  "icon": "",
+  "author": "s3ppo",
+  "homepage": "https://github.com/s3ppo/mos-htop",
+  "support": "https://github.com/s3ppo/mos-htop/issues",
+  "donate": ""
+}
