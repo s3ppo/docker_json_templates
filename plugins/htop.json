@@ -5,7 +5,7 @@
   "repository": "https://github.com/s3ppo/mos-htop",
   "architecture": [ "amd64" ],
   "driver": false,
-  "icon": "",
+  "icon": "https://raw.githubusercontent.com/s3ppo/mos-htop/4d30e45d1b89efabf708b59b0966d81bffe2ae05/page/assets/pulse.png",
   "author": "s3ppo",
   "homepage": "https://github.com/s3ppo/mos-htop",
   "support": "https://github.com/s3ppo/mos-htop/issues",
