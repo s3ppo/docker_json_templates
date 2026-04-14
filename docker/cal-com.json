@@ -9,7 +9,7 @@
   "extra_parameters": null,
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:3000]/",
-  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cal-com.png",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cal-com-light.png",
   "project": "https://cal.com",
   "support": "https://github.com/calcom/docker/issues",
   "description": "\n        The open-source Calendly alternative. \r\n        [br]\n        Add `npx prisma studio` to the PostArgs field to enable Prisma Studio.\n    ",
