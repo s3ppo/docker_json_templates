@@ -1,10 +1,10 @@
 {
   "name": "MOS WIFI",
   "description": "WIFI for MOS",
-  "category": [ "System" ],
+  "category": [ "Driver" ],
   "repository": "https://github.com/s3ppo/mos_wifi",
   "architecture": [ "amd64" ],
-  "driver": false,
+  "driver": true,
   "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-wifi.png",
   "author": "s3ppo",
   "homepage": "https://github.com/s3ppo/mos_wifi",
