@@ -28,21 +28,21 @@
   "paths": [
     {
       "name": "Caddyfile",
-      "host": "./caddy/Caddyfile",
+      "host": "/mnt/cache/appdata/caddy/Caddyfile",
       "container": "/etc/caddy/Caddyfile",
       "description": "The Caddyfile is the configuration file for Caddy. It defines how Caddy should serve your sites and applications.",
       "required": true
     },
     {
       "name": "Data",
-      "host": "./caddy/data",
+      "host": "/mnt/cache/appdata/caddy/data",
       "container": "/data",
       "description": "Caddy uses this directory to store its data, including TLS certificates and keys.",
       "required": true
     },
     {
       "name": "Config",
-      "host": "./caddy/config",
+      "host": "/mnt/cache/appdata/caddy/config",
       "container": "/config",
       "description": "Caddy uses this directory to store its configuration files.",
       "required": true
