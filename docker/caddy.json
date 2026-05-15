@@ -1,0 +1,52 @@
+{
+  "name": "caddy",
+  "repo": "caddy:latest",
+  "registry": "https://hub.docker.com/_/caddy",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": null,
+  "privileged": false,
+  "extra_parameters": null,
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:2019]/",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/caddy.png",
+  "project": "https://caddyserver.com",
+  "support": "https://caddyserver.com/docs/support/",
+  "description": "Caddy is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go",
+  "ports": [
+    {
+      "name": "Admin Port",
+      "host": "2019",
+      "container": "2019",
+      "protocol": "tcp",
+      "description": "Container Port: 2019",
+      "required": true,
+      "mask": false
+    }
+  ],
+  "variables": [],
+  "paths": [
+    {
+      "name": "Caddyfile",
+      "host": "./caddy/Caddyfile",
+      "container": "/etc/caddy/Caddyfile",
+      "description": "The Caddyfile is the configuration file for Caddy. It defines how Caddy should serve your sites and applications.",
+      "required": true
+    },
+    {
+      "name": "Data",
+      "host": "./caddy/data",
+      "container": "/data",
+      "description": "Caddy uses this directory to store its data, including TLS certificates and keys.",
+      "required": true
+    },
+    {
+      "name": "Config",
+      "host": "./caddy/config",
+      "container": "/config",
+      "description": "Caddy uses this directory to store its configuration files.",
+      "required": true
+    }
+  ],
+  "category": ["network"]
+}
