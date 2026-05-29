@@ -1,0 +1,49 @@
+services:
+
+  mariadb:
+    image: mariadb:10.11
+    container_name: invoiceninja-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootPasswortHier
+      MYSQL_DATABASE: invoiceninja5
+      MYSQL_USER: invoiceninja
+      MYSQL_PASSWORD: dbPasswortHier
+    volumes:
+      - /mnt/main/appdata/invoiceninja/db:/var/lib/mysql
+    networks:
+      - invoiceninja
+
+  invoiceninja:
+    image: maihai/invoiceninja_v5:latest
+    container_name: invoiceninja
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    ports:
+      - "8443:443"
+    environment:
+      APP_URL: https://YOURIPHERE:8443
+      APP_KEY: base64:Cjigrb8sVvnsdZNB2rwvQlgrWb2KGBfX1DcN5kqEQh4=
+      APP_ENV: production
+      APP_DEBUG: "false"
+
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      DB_DATABASE: invoiceninja5
+      DB_USERNAME: invoiceninja
+      DB_PASSWORD: dbPasswortHier
+
+      IN_USER_EMAIL: admin@beispiel.de
+      IN_PASSWORD: adminPasswortHier
+
+      REQUIRE_HTTPS: "true"
+      # MEMORY_LIMIT: 512M
+    volumes:
+      - /mnt/main/appdata/invoiceninja/storage:/var/www/app/storage
+    networks:
+      - invoiceninja
+
+networks:
+  invoiceninja:
+    driver: bridge

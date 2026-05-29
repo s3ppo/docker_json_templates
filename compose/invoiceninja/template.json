@@ -1,0 +1,9 @@
+{
+  "name": "invoiceninja-compose",
+  "category": [ "finance" ],
+  "description": "Invoice Ninja is a free, open-source platform for invoicing, expenses, and time-tracking. Easily manage your clients, invoices, and payments.",
+  "website": "https://www.invoiceninja.com/",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/invoiceninja.png",
+  "support": "https://github.com/invoiceninja/invoiceninja/issues",
+  "web_ui_url": "http://[ADDRESS]:[PORT:8443]/"
+}
