@@ -1,0 +1,96 @@
+{
+  "name": "network-optimizer-speedtest",
+  "repo": "ghcr.io/ozark-connect/speedtest:latest",
+  "registry": "https://github.com/ozark-connect/speedtest/pkgs/container/speedtest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:3005]",
+  "icon": "https://raw.githubusercontent.com/Ozark-Connect/NetworkOptimizer/refs/heads/main/src/OpenSpeedTest/assets/images/icons/android-chrome-192x192.png",
+  "project": "https://github.com/ozark-connect/network-optimizer",
+  "support": "https://github.com/ozark-connect/network-optimizer",
+  "description": "Network Optimizer Speed Test - Customized OpenSpeedTest component that integrates with Network Optimizer.\r\n\r\nThis is a companion container for Network Optimizer that provides:\r\n- Client-side speed testing capabilities\r\n- Automatic result reporting to Network Optimizer\r\n- Web-based speed test interface\r\n\r\nRequirements:\r\n- Network Optimizer container must be running\r\n- HOST_IP or HOST_NAME must be set for result reporting",
+  "paths": [],
+  "ports": [
+    {
+      "name": "WebUI Port",
+      "host": "3005",
+      "container": "3000",
+      "protocol": "tcp",
+      "description": "Port for accessing the speed test web interface",
+      "required": true,
+      "mask": false
+    }
+  ],
+  "variables": [
+    {
+      "name": "Timezone",
+      "key": "TZ",
+      "value": "America/Chicago",
+      "description": "Timezone setting",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "Host Name",
+      "key": "HOST_NAME",
+      "value": null,
+      "description": "Host name for URL construction and host enforcement redirect",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "Host IP",
+      "key": "HOST_IP",
+      "value": null,
+      "description": "Host IP for URL construction",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "OpenSpeedTest Port",
+      "key": "OPENSPEEDTEST_PORT",
+      "value": "3005",
+      "description": "Port number for OpenSpeedTest (should match WebUI Port)",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "OpenSpeedTest Host",
+      "key": "OPENSPEEDTEST_HOST",
+      "value": null,
+      "description": "OpenSpeedTest host configuration",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "OpenSpeedTest HTTPS",
+      "key": "OPENSPEEDTEST_HTTPS",
+      "value": "false",
+      "description": "Set to true if using HTTPS",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "OpenSpeedTest HTTPS Port",
+      "key": "OPENSPEEDTEST_HTTPS_PORT",
+      "value": "443",
+      "description": "HTTPS port if using HTTPS",
+      "required": false,
+      "mask": false
+    },
+    {
+      "name": "Reverse Proxied Host Name",
+      "key": "REVERSE_PROXIED_HOST_NAME",
+      "value": null,
+      "description": "Reverse proxy hostname for result reporting URL",
+      "required": false,
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "labels": []
+}
