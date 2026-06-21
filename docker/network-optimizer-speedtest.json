@@ -10,8 +10,8 @@
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:3005]",
   "icon": "https://raw.githubusercontent.com/Ozark-Connect/NetworkOptimizer/refs/heads/main/src/OpenSpeedTest/assets/images/icons/android-chrome-192x192.png",
-  "project": "https://github.com/ozark-connect/network-optimizer",
-  "support": "https://github.com/ozark-connect/network-optimizer",
+  "project": "https://github.com/Ozark-Connect/NetworkOptimizer",
+  "support": "https://github.com/Ozark-Connect/NetworkOptimizer/issues",
   "description": "Network Optimizer Speed Test - Customized OpenSpeedTest component that integrates with Network Optimizer.\r\n\r\nThis is a companion container for Network Optimizer that provides:\r\n- Client-side speed testing capabilities\r\n- Automatic result reporting to Network Optimizer\r\n- Web-based speed test interface\r\n\r\nRequirements:\r\n- Network Optimizer container must be running\r\n- HOST_IP or HOST_NAME must be set for result reporting",
   "paths": [],
   "ports": [
