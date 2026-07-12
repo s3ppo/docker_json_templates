@@ -1,0 +1,8 @@
+{
+  "name": "autodarts",
+  "category": [ "misc" ],
+  "description": "AutoDarts is software for managing dart games and tournaments.",
+  "website": "https://autodarts.io/",
+  "icon": "https://cdn.brandfetch.io/idqIlBFNEW/w/1080/h/1080/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1781722665378",
+  "support": "https://github.com/vllni/autodarts-docker/issues"
+}
