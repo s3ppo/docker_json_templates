@@ -9,7 +9,7 @@
   "extra_parameters": null,
   "web_ui_url": null,
   "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/mariadb.png",
-  "description": ["MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL."],
+  "description": "MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL.",
   "paths": [
     {
       "name": "Appdata",
