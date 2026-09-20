@@ -5,7 +5,7 @@
   "repository": "https://github.com/s3ppo/moshub-template-builder",
   "architecture": [ "amd64" ],
   "driver": false,
-  "icon": "",
+  "icon": "https://raw.githubusercontent.com/s3ppo/moshub-template-builder/9ba5c310d7dac038d7e59cb4d11cc9f56f531cd0/assets/windows.png",
   "author": "s3ppo",
   "homepage": "https://github.com/s3ppo/moshub-template-builder",
   "support": "https://github.com/s3ppo/moshub-template-builder/issues",
