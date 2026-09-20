@@ -1,6 +1,6 @@
 {
-  "name": "MOS htop",
-  "description": "Htop for MOS",
+  "name": "MOS Hub Template Builder",
+  "description": "MOS Hub Template Builder",
   "category": [ "System" ],
   "repository": "https://github.com/s3ppo/moshub-template-builder",
   "architecture": [ "amd64" ],
