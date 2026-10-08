@@ -13,17 +13,8 @@
   "icon": "https://raw.githubusercontent.com/candiddev/homechart/refs/heads/main/homechart.png",
   "project": "https://homechart.app/",
   "support": "https://github.com/candiddev/homechart/issues",
-  "description": "Homechart is a web-based platform for organizing and managing your household. Keep everyone in the loop by tracking shared calendars, meal plans, reminders, tasks, and more. Perfect for busy parents, shared households, and blended families. No ads, secure, encrypted and private - runs self-hosted on your network.",
-  "paths": [
-    {
-      "name": "Data Directory",
-      "host": "/mnt/cache/appdata/homechart/data",
-      "container": "/data",
-      "mode": "rw",
-      "description": "Homechart data storage location. Stores database, configuration, and user data.",
-      "required": true
-    }
-  ],
+  "description": "Homechart is a web-based platform for organizing and managing your household. Keep everyone in the loop by tracking shared calendars, meal plans, reminders, tasks, and more. Perfect for busy parents, shared households, and blended families. No ads, secure, encrypted and private - runs self-hosted on your network. Requires PostgreSQL 16 database.",
+  "paths": [],
   "ports": [
     {
       "name": "Web UI",
@@ -36,6 +27,14 @@
     }
   ],
   "variables": [
+    {
+      "name": "homechart_database_uri",
+      "key": "homechart_database_uri",
+      "value": "postgres://homechart:homechart@postgres:5432/homechart",
+      "description": "PostgreSQL database URI. Format: postgres://username:password@host:port/database",
+      "required": true,
+      "mask": false
+    },
     {
       "name": "LOG_LEVEL",
       "key": "LOG_LEVEL",
