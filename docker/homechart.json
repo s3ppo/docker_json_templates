@@ -1,0 +1,50 @@
+{
+  "name": "Homechart",
+  "repo": "ghcr.io/candiddev/homechart:latest",
+  "registry": "https://github.com/candiddev/homechart/pkgs/container/homechart",
+  "category": [ "household", "organization" ],
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": null,
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:3000]",
+  "icon": "https://raw.githubusercontent.com/candiddev/homechart/refs/heads/main/homechart.png",
+  "project": "https://homechart.app/",
+  "support": "https://github.com/candiddev/homechart/issues",
+  "description": "Homechart is a web-based platform for organizing and managing your household. Keep everyone in the loop by tracking shared calendars, meal plans, reminders, tasks, and more. Perfect for busy parents, shared households, and blended families. No ads, secure, encrypted and private - runs self-hosted on your network.",
+  "paths": [
+    {
+      "name": "Data Directory",
+      "host": "/mnt/cache/appdata/homechart/data",
+      "container": "/data",
+      "mode": "rw",
+      "description": "Homechart data storage location. Stores database, configuration, and user data.",
+      "required": true
+    }
+  ],
+  "ports": [
+    {
+      "name": "Web UI",
+      "host": "3000",
+      "container": "3000",
+      "protocol": "tcp",
+      "description": "Homechart web interface",
+      "required": true,
+      "mask": false
+    }
+  ],
+  "variables": [
+    {
+      "name": "LOG_LEVEL",
+      "key": "LOG_LEVEL",
+      "value": "info",
+      "description": "Logging level (debug, info, warn, error)",
+      "required": false,
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "labels": []
+}
