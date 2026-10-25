@@ -4,7 +4,7 @@
   "category": [ "network" ],
   "repository": "https://github.com/s3ppo/mos-nethogs",
   "architecture": [ "amd64" ],
-  "driver": true,
+  "driver": false,
   "icon": "https://github.com/s3ppo/mos-nethogs/blob/8cf7cbc90b50887fd084a5fb1e614a3256844edf/page/assets/hogs.jpg?raw=true",
   "author": "s3ppo",
   "homepage": "https://github.com/s3ppo/mos-nethogs",
