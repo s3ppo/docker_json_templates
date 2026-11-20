@@ -1,6 +1,6 @@
 {
-  "name": "MOS Backup",
-  "description": "Backup Plugin for MOS",
+  "name": "MOS Backup Plus",
+  "description": "Fork and extension from MOS Backup (ich777)",
   "category": [ "Backup", "System" ],
   "repository": "https://github.com/s3ppo/mos-backup",
   "architecture": [ "all" ],
