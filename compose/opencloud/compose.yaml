@@ -1,0 +1,178 @@
+services:
+  init:
+    image: alpine/openssl:latest
+    container_name: opencloud-init
+    restart: "no"
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        chown -R 1000:1000 /oc-config /radicale-data
+        chown 1000:1000 /oc-data
+        if [ ! -f /certs/cert.pem ]; then
+          case "${SERVER_HOST}" in
+            *[!0-9.]*) SAN="DNS:${SERVER_HOST}" ;;
+            *) SAN="IP:${SERVER_HOST}" ;;
+          esac
+          openssl req -x509 -nodes -newkey rsa:2048 -days 825 -keyout /certs/key.pem -out /certs/cert.pem -subj "/CN=${SERVER_HOST}" -addext "subjectAltName=$$SAN"
+        fi
+        chmod 644 /certs/key.pem /certs/cert.pem
+    volumes:
+      - ./opencloud-config:/oc-config
+      - ./opencloud-data:/oc-data
+      - ./radicale-data:/radicale-data
+      - ./euro-office-certs:/certs
+
+  opencloud:
+    image: opencloudeu/opencloud-rolling:latest
+    container_name: opencloud
+    restart: unless-stopped
+    user: "1000:1000"
+    entrypoint:
+      - /bin/sh
+    command:
+      - -c
+      - opencloud init || true; opencloud server
+    ports:
+      - "9200:9200"
+    extra_hosts:
+      - "${SERVER_HOST}:host-gateway"
+    environment:
+      OC_URL: https://${SERVER_HOST:?SERVER_HOST fehlt in .env}:9200
+      OC_INSECURE: "true"
+      PROXY_HTTP_ADDR: 0.0.0.0:9200
+      IDM_ADMIN_PASSWORD: ${IDM_ADMIN_PASSWORD:?IDM_ADMIN_PASSWORD fehlt in .env}
+      OC_LOG_LEVEL: info
+      OC_ADD_RUN_SERVICES: collaboration
+      GATEWAY_GRPC_ADDR: 0.0.0.0:9142
+      COLLABORATION_HTTP_ADDR: 0.0.0.0:9300
+      COLLABORATION_APP_NAME: Euro-Office
+      COLLABORATION_APP_PRODUCT: OnlyOffice
+      COLLABORATION_APP_ADDR: https://${SERVER_HOST}:9943
+      COLLABORATION_APP_ICON: https://${SERVER_HOST}:9943/web-apps/apps/documenteditor/main/resources/img/favicon.ico
+      COLLABORATION_APP_INSECURE: "true"
+      COLLABORATION_APP_PROOF_DISABLE: "true"
+      COLLABORATION_WOPI_SRC: http://opencloud:9300
+      COLLABORATION_CS3API_DATAGATEWAY_INSECURE: "true"
+    volumes:
+      - ./opencloud-config:/etc/opencloud
+      - ./opencloud-data:/var/lib/opencloud
+    configs:
+      - source: oc_proxy
+        target: /etc/opencloud/proxy.yaml
+      - source: oc_csp
+        target: /etc/opencloud/csp.yaml
+    depends_on:
+      init:
+        condition: service_completed_successfully
+      radicale:
+        condition: service_started
+
+  radicale:
+    image: opencloudeu/radicale:latest
+    container_name: opencloud-radicale
+    restart: unless-stopped
+    user: "1000:1000"
+    volumes:
+      - ./radicale-data:/var/lib/radicale
+    configs:
+      - source: radicale_config
+        target: /etc/radicale/config
+    depends_on:
+      init:
+        condition: service_completed_successfully
+
+  euro-office:
+    image: ghcr.io/euro-office/documentserver:latest
+    container_name: euro-office
+    restart: unless-stopped
+    environment:
+      WOPI_ENABLED: "true"
+      JWT_ENABLED: "true"
+      JWT_SECRET: ${EURO_OFFICE_JWT_SECRET:?EURO_OFFICE_JWT_SECRET fehlt in .env}
+      USE_UNAUTHORIZED_STORAGE: "true"
+      SSL_CERTIFICATE_PATH: /certs/cert.pem
+      SSL_KEY_PATH: /certs/key.pem
+    ports:
+      - "9943:443"
+    volumes:
+      - ./euro-office-data:/var/www/euro-office/Data
+      - ./euro-office-certs:/certs:ro
+    depends_on:
+      init:
+        condition: service_completed_successfully
+
+configs:
+  oc_proxy:
+    content: |
+      additional_policies:
+        - name: default
+          routes:
+            - endpoint: /caldav/
+              backend: http://radicale:5232
+              remote_user_header: X-Remote-User
+              skip_x_access_token: true
+              additional_headers:
+                - X-Script-Name: /caldav
+            - endpoint: /.well-known/caldav
+              backend: http://radicale:5232
+              remote_user_header: X-Remote-User
+              skip_x_access_token: true
+              additional_headers:
+                - X-Script-Name: /caldav
+            - endpoint: /carddav/
+              backend: http://radicale:5232
+              remote_user_header: X-Remote-User
+              skip_x_access_token: true
+              additional_headers:
+                - X-Script-Name: /carddav
+            - endpoint: /.well-known/carddav
+              backend: http://radicale:5232
+              remote_user_header: X-Remote-User
+              skip_x_access_token: true
+              additional_headers:
+                - X-Script-Name: /carddav
+  oc_csp:
+    content: |
+      directives:
+        frame-src:
+          - "'self'"
+          - "blob:"
+          - "https://${SERVER_HOST}:9943/"
+        connect-src:
+          - "'self'"
+          - "blob:"
+          - "https://${SERVER_HOST}:9943/"
+        img-src:
+          - "'self'"
+          - "data:"
+          - "blob:"
+          - "https://${SERVER_HOST}:9943/"
+  radicale_config:
+    content: |
+      [server]
+      hosts = 0.0.0.0:5232
+
+      [auth]
+      type = http_x_remote_user
+
+      [rights]
+      type = owner_only
+
+      [storage]
+      filesystem_folder = /var/lib/radicale/collections
+      predefined_collections = {
+          "def-addressbook": {
+             "D:displayname": "Personal Address Book",
+             "tag": "VADDRESSBOOK"
+          },
+          "def-calendar": {
+             "C:supported-calendar-component-set": "VEVENT,VJOURNAL,VTODO",
+             "D:displayname": "Personal Calendar",
+             "tag": "VCALENDAR"
+          }
+        }
+
+      [web]
+      type = none

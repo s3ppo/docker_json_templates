@@ -1,0 +1,8 @@
+{
+  "name": "opencloud-compose",
+  "category": [ "misc" ],
+  "description": "OpenCloud is a self-hosted cloud platform for collaboration and file sharing. Including Eurooffice integration and support for CalDAV and CardDAV.",
+  "website": "https://opencloudeu.github.io/",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/open-cloud.png",
+  "support": "https://github.com/opencloudeu/opencloud-docker/issues"
+}
